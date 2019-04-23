@@ -11,6 +11,7 @@ vsftpd:
   {% endif %}
   service.running:
     - enable: True
+    - reload: True
     - name: {{ vsftpd.service }}
     - require:
       - file: vsftpd_chroot_dir
